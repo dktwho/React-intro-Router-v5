@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, NavLink, Link} from 'react-router-dom'
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contacts from './components/Contacts/Contacts';
@@ -10,13 +10,13 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink exact to="/" activeStyle={{fontWeight: "bold",    color: "red"  }} >Home</NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink exact to="/about" activeStyle={{fontWeight: "bold",    color: "red"  }} >About</NavLink>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <NavLink exact to="/dashboard" activeStyle={{fontWeight: "bold",    color: "red"  }} >Dashboard</NavLink>
           </li>
         </ul>
         <hr />
